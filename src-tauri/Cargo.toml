@@ -1,7 +1,7 @@
 [package]
 name = "app-rust-ts"
 version = "0.1.0"
-description = "Inventory App"
+description = "Base App: Please change me"
 authors = ["seisyll"]
 edition = "2021"
 
