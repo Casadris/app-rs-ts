@@ -1,5 +1,5 @@
 {
-  "productName": "ivn-app",
+  "productName": "app-rust-ts",
   "version": "0.1.0",
   "identifier": "com.casadris-ivn.app",
   "build": {
@@ -11,7 +11,7 @@
   "app": {
     "windows": [
       {
-        "title": "ivn-app",
+        "title": "app-rust-ts",
         "width": 800,
         "height": 600
       }
