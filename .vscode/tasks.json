@@ -1,0 +1,24 @@
+{
+	// ―― » ref: https://go.microsoft.com/fwlink/?LinkId=733558
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "ui:dev",
+			"type": "shell",
+			// ―― » `dev` keeps running in the background
+			// ―― » ideally need configure a `problemMatcher`
+			// ―― » ref: https://code.visualstudio.com/docs/editor/tasks#_can-a-background-task-be-used-as-a-prelaunchtask-in-launchjson
+			"isBackground": true,
+			// ―― » `beforeDevCommand`:
+			"command": "bun",
+			"args": ["dev"]
+		},
+		{
+			"label": "ui:build",
+			"type": "shell",
+			// ―― » `beforeBuildCommand`:
+			"command": "bun",
+			"args": ["build"]
+		}
+	]
+}

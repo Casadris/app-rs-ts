@@ -1,0 +1,19 @@
+name: Package Version Automate
+on: [push]
+permissions:
+  contents: write
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+
+    - name: Bumping version
+      if: github.ref == 'refs/heads/active'
+      uses: jpb06/bump-package@latest
+      with:
+        major-keywords: BREAKING CHANGE,major,\[M\],Release
+        minor-keywords: Feat;,Implement
+        patch-keywords: dependencies,dependency,Fix,Chore,Stash,Revise,Add,Lint,Rev;
+        should-default-to-patch: false

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Dependencies */
+@import "./preload.pcss";
+
+@import "./base.less";
+
+/*!
+ *
+ * Modern normalize
+ *
+ */
+
+/* ―― » Container */
+html,
+html, body, #app, #inventory-app {
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	
+	/* Prevent horizontal scroll */
+	/* overflow: hidden; */
+
+	/*  ―― » Better Font Rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	overflow-y: hidden;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#inventory-app {
+	overflow-x: hidden;
+}

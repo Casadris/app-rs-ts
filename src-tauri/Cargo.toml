@@ -1,0 +1,22 @@
+[package]
+name = "ivn-app"
+version = "0.1.0"
+description = "Inventory App"
+authors = ["seisyll"]
+edition = "2021"
+
+# ―― » Def; https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "ivn_app_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-rc", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0-rc", features = [] }
+tauri-plugin-shell = "2.0.0-rc"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+

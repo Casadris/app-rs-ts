@@ -1,0 +1,34 @@
+{
+	// ―― » ref: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "App Development Debug",
+			"cargo": {
+				"args": [
+					"build",
+					"--manifest-path=./src-tauri/Cargo.toml",
+					"--no-default-features"
+				]
+			},
+			// ―― » for `beforeDevCommand`, `.vscode/tasks.json` must be set
+			"preLaunchTask": "ui:dev"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "App Production Debug",
+			"cargo": {
+				"args": [
+					"build",
+					"--release",
+					"--manifest-path=./src-tauri/Cargo.toml"
+				]
+			},
+			// ―― » for `beforeBuildCommand`, `.vscode/tasks.json` must be set
+			"preLaunchTask": "ui:build"
+		}
+	]
+}
